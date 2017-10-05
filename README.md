@@ -29,6 +29,6 @@ This application scrapes articles from the NY Times homepage website.
 [license]: https://github.com/dskay3/NYTimesScraper/blob/master/LICENSE
 [license-badge]: https://img.shields.io/github/license/mashape/apistatus.svg
 [github-watch]: https://github.com/dskay3/NYTimesScraper/watchers
-[github-watch-badge]: https://img.shields.io/github/watchers/badges/shields.svg?style=social&label=Watch&style=flat-square
+[github-watch-badge]: https://img.shields.io/github/watchers/dskay3/NYTimesScraper.svg?style=social&label=Watch&style=flat-square
 [github-star]: https://github.com/dskay3/NYTimesScraper/stargazers
-[github-star-badge]: https://img.shields.io/github/stars/badges/shields.svg?style=social&label=Stars&style=flat-square
+[github-star-badge]: https://img.shields.io/github/stars/dskay3/NYTimesScraper.svg?style=social&label=Stars&style=flat-square
