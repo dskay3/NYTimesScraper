@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Old-English";
+  src: url("../Fonts/EnglishTowne.ttf") format("truetype");
+}
+
 .header {
   height: 500px;
   background-size: cover;
@@ -27,11 +32,13 @@
 }
 
 .header h1 {
-  font-size: 60px;
+  font-size: 70px;
   padding-top: 140px;
   margin-top: 0;
+  font-family: "Old-English";
 }
 
 .header p {
-  font-size: 18px;
+  font-size: 35px;
+  font-family: 'Tangerine', cursive;
 }
