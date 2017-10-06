@@ -1,18 +1,16 @@
-// Import Dependencies
+// Dependencies
 import React from "react";
-import Header from "../../components/Header";
+import HeaderContainer from "../../components/HeaderContainer";
 import Container from "../../components/Container";
 import Row from "../../components/Row";
 import Col from "../../components/Col";
 import SearchForm from "../../components/SearchForm";
 // import SearchResults from "../components/SearchResults";
 
+// Main component
 const Main = () =>
   <div>
-    <Header backgroundImage="https://i.imgur.com/hIxiSKK.jpg">
-      <h1>NY Times Article Scraper</h1>
-      <p>Articles that are directly scraped from NY Times</p>
-    </Header>
+    <HeaderContainer />
 
     <Container style={{ marginTop: 30 }}>
       <Row>
