@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Old-English";
+  src: url("../Fonts/EnglishTowne.ttf") format("truetype");
+}
+
+.brand-logo {
+  margin-left: 20px;
+  font-family: "Old-English";
+  font-style: "normal";
+  letter-spacing: 0px;
+  color: #000 !important;
+}
+
+.main-nav {
+  background-color: #FFF;
+}
+
+a {
+  color: #000 !important;
+}

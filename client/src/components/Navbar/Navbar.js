@@ -5,11 +5,11 @@ import "./Navbar.css";
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 const Navbar = props =>
-  <nav className="nav-extended">
+  <nav className="nav-extended main-nav">
     <div className="nav-wrapper">
       {/* Webpage Logo */}
       <Link className="brand-logo" to="/">
-        NY Times Article Scraper
+        The NY Times Article Scraper
       </Link>
 
       {/* Mobile: Creates burger icon */}
