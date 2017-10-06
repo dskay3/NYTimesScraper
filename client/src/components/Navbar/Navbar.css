@@ -10,6 +10,11 @@
   letter-spacing: 0px;
   color: #000 !important;
 }
+  .brand-logo:hover,
+  .brand-logo:active,
+  .brand-logo:focus {
+    text-decoration: none;
+  }
 
 .main-nav {
   background-color: #FFF;
