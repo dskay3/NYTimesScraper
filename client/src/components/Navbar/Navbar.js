@@ -34,10 +34,8 @@ const Navbar = props =>
         </li>
 
         {/* Link to Repo */}
-        <li 
-          className={ window.location.pathname === "/repo" ? "active" : "" }
-        >
-          <Link to="/repo">Repo</Link>
+        <li>
+          <a href="https://github.com/dskay3/NYTimesScraper">Repo</a>
         </li>
       </ul>
 
@@ -58,10 +56,8 @@ const Navbar = props =>
         </li>
 
         {/* Link to Repo */}
-        <li 
-          className={ window.location.pathname === "/repo" ? "active" : "" }
-        >
-          <Link to="/repo">Repo</Link>
+        <li>
+          <a href="https://github.com/dskay3/NYTimesScraper">Repo</a>
         </li>
       </ul>
     </div>
