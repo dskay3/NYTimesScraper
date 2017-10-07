@@ -40,7 +40,7 @@ class Main extends Component {
         console.log(results);
 
         this.setState({
-          articles: results.docs,
+          articles: results,
           search: "",
           start: "",
           end: ""
