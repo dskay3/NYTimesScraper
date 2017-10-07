@@ -5,7 +5,7 @@ import Container from "../../components/Container";
 import Row from "../../components/Row";
 import Col from "../../components/Col";
 import SearchForm from "../../components/SearchForm";
-// import SearchResults from "../components/SearchResults";
+import SearchResults from "../../components/SearchResults";
 import API from "../../util/API";
 
 // Main component
@@ -40,7 +40,7 @@ class Main extends Component {
         console.log(results);
 
         this.setState({
-          articles: results.data,
+          articles: results.docs,
           search: "",
           start: "",
           end: ""
@@ -66,9 +66,9 @@ class Main extends Component {
             </Col>
 
             <Col size="sm-7">
-              {/* <SearchResults>
-              
-              </SearchResults> */}
+              <SearchResults
+                results={ this.state.articles }
+              />
             </Col>
           </Row>
         </Container>
