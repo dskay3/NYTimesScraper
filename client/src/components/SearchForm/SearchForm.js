@@ -2,6 +2,7 @@
 import React from "react";
 import "./SearchForm.css";
 
+// Search Form component
 const SearchForm = props =>
   <form className="search">
     <label htmlFor="topic">Topic</label>
