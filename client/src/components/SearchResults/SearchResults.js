@@ -5,6 +5,9 @@ import "./SearchResults.css";
 // Search Results component
 const SearchResults = props => {
   console.log(props.results);
+
+  // ISSUE: on the initial load, props.results is undefined. I want to make it so that when it is undefined, it will return the first conditional. If not, return the else.
+
   if (typeof(props.results) == 'undefined'){
     return(
       <li className="list-group-item">
