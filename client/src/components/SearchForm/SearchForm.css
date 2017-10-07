@@ -1,16 +1,13 @@
-form.search {
+form.searchForm {
   margin-bottom: 10px;
 }
 
-form.search button[type="submit"] {
-  margin-top: 10px;
-}
-
-form.search input {
+form.searchForm input {
   color: gray;
+  margin-bottom: 5px;
 }
 
-form.search.label {
+form.searchForm.label {
   color: darkgray;
 }
 

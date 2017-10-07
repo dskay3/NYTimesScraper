@@ -4,19 +4,17 @@ import "./SearchForm.css";
 
 // Search Form component
 const SearchForm = props =>
-  <form className="search">
-    <label htmlFor="topic">Topic</label>
+  <form className="searchForm">
     <input
       value={ props.search }
       onChange={ props.handleInputChange }
       name="search"
-      type="text"
       placeholder="Enter in topic"
       id="search"
       required
     />
+    <label htmlFor="search">Search Topic</label>
 
-    <label htmlFor="startDate">Start Date</label>
     <input
       value={ props.start }
       onChange={ props.handleInputChange }
@@ -25,8 +23,8 @@ const SearchForm = props =>
       placeholder="Enter Start Date"
       required
     />
+    <label htmlFor="start">Start Date</label>
 
-    <label htmlFor="endDate">End Date</label>
     <input
       value={ props.end }
       onChange={ props.handleInputChange }
@@ -35,6 +33,10 @@ const SearchForm = props =>
       placeholder="Enter End Date"
       required
     />
+    <label htmlFor="end">End Date</label>
+
+    <br />
+    <br />
 
     <button
       type="submit"
