@@ -10,10 +10,10 @@ class SearchForm extends Component {
   }
 
   handleInputChange = event => {
+    const { name, value } = event.target;
+
     this.setState({
-      topic: event.target.value,
-      startDate: event.target.value,
-      endDate: event.target.value
+      [name]: value
     });
   }
 
@@ -31,18 +31,19 @@ class SearchForm extends Component {
         <label htmlFor="topic">Topic</label>
         <input
           value={ this.state.topic }
-          onChange={ this.state.handleInputChange }
+          onChange={ this.handleInputChange }
           name="topic"
           type="text"
           placeholder="Enter in topic"
           id="topic"
+          required
         />
     
         <label htmlFor="startDate">Start Date</label>
         <input
           value={ this.state.startDate }
-          onChange={ this.state.handleInputChange }
-          name="start_date"
+          onChange={ this.handleInputChange }
+          name="startDate"
           id="startDate"
           placeholder="Enter Start Date"
           required
@@ -51,7 +52,7 @@ class SearchForm extends Component {
         <label htmlFor="endDate">End Date</label>
         <input
           value={ this.state.endDate }
-          onChange={ this.state.handleInputChange }
+          onChange={ this.handleInputChange }
           name="endDate"
           id="endDate"
           placeholder="Enter End Date"
@@ -60,7 +61,7 @@ class SearchForm extends Component {
     
         <button
           type="submit"
-          onClick={ this.state.handleFormSubmit }
+          onClick={ this.handleFormSubmit }
           className="btn waves-effect waves-light submit-btn"
         >
           Search
