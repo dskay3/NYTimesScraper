@@ -1,30 +1,80 @@
 // Dependencies
-import React from "react";
+import React, { Component } from "react";
 import HeaderContainer from "../../components/HeaderContainer";
 import Container from "../../components/Container";
 import Row from "../../components/Row";
 import Col from "../../components/Col";
 import SearchForm from "../../components/SearchForm";
 // import SearchResults from "../components/SearchResults";
+import API from "../../util/API";
 
 // Main component
-const Main = () =>
-  <div>
-    <HeaderContainer />
+class Main extends Component {
+  state = {
+    articles: [],
+    search: "",
+    start: "",
+    end: ""
+  }
 
-    <Container style={{ marginTop: 30 }}>
-      <Row>
-        <Col size="sm-5">
-          <SearchForm />
-        </Col>
+  handleInputChange = event => {
+    // Stores values from the form
+    const { name, value } = event.target;
 
-        <Col size="sm-7">
-          {/* <SearchResults>
-          
-          </SearchResults> */}
-        </Col>
-      </Row>
-    </Container>
-  </div>;
+    // Sets the states according to the values in the form
+    this.setState({
+      [name]: value
+    });
+  }
+
+  handleFormSubmit = event => {
+    // Prevents running duplicates
+    event.preventDefault();
+
+    API.getArticles(
+      this.state.search,
+      this.state.start,
+      this.state.end
+    )
+      .then(results => {
+        console.log(results);
+
+        this.setState({
+          articles: results.data,
+          search: "",
+          start: "",
+          end: ""
+        })
+      });
+  }
+
+  render() {
+    return(
+      <div>
+        <HeaderContainer />
+
+        <Container style={{ marginTop: 30 }}>
+          <Row>
+            <Col size="sm-5">
+              <SearchForm 
+                handleFormSubmit={ this.handleFormSubmit }
+                handleInputChange={ this.handleInputChange }
+                end={ this.state.end }
+                start={ this.state.start }
+                search={ this.state.search }
+              />
+            </Col>
+
+            <Col size="sm-7">
+              {/* <SearchResults>
+              
+              </SearchResults> */}
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    );
+  }
+}
 
 export default Main;
