@@ -61,7 +61,7 @@ class SearchForm extends Component {
         <button
           type="submit"
           onClick={ this.state.handleFormSubmit }
-          className="btn waves-effect waves-light"
+          className="btn waves-effect waves-light submit-btn"
         >
           Search
           <i className="material-icons right">send</i>

@@ -14,13 +14,11 @@ const Main = () =>
 
     <Container style={{ marginTop: 30 }}>
       <Row>
-        <Col size="sm-4">
-          <SearchForm>
-          
-          </SearchForm>
+        <Col size="sm-5">
+          <SearchForm />
         </Col>
 
-        <Col size="sm-8">
+        <Col size="sm-7">
           {/* <SearchResults>
           
           </SearchResults> */}

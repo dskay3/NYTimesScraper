@@ -13,3 +13,11 @@ form.search input {
 form.search.label {
   color: darkgray;
 }
+
+label {
+  font-size: 15px;
+}
+
+.submit-btn {
+  background-color: #000;
+}
