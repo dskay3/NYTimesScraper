@@ -1,12 +1,13 @@
 // Import dependencies
 import React, { Component } from "react";
 import "./SearchForm.css";
+import API from "../../util/API";
 
 class SearchForm extends Component {
   state = {
-    topic: "",
-    startDate: "",
-    endDate: ""
+    search: "",
+    start: "",
+    end: ""
   }
 
   handleInputChange = event => {
@@ -18,11 +19,17 @@ class SearchForm extends Component {
   }
 
   handleFormSubmit = event => {
+    // Prevent running duplicates
     event.preventDefault();
 
-    this.props.updateSearch(this.state.topic, this.state.startDate, this.state.endDate);
-
-    return false;
+    // if(this.state.topic && this.state.startDate && this.state.endDate) {
+      API.getArticles(
+        this.state.search,
+        this.state.start,
+        this.state.end
+      )
+        .then(results => console.log(results))
+    // }
   };
 
   render() {
@@ -30,31 +37,31 @@ class SearchForm extends Component {
       <form className="search">
         <label htmlFor="topic">Topic</label>
         <input
-          value={ this.state.topic }
+          value={ this.state.search }
           onChange={ this.handleInputChange }
-          name="topic"
+          name="search"
           type="text"
           placeholder="Enter in topic"
-          id="topic"
+          id="search"
           required
         />
     
         <label htmlFor="startDate">Start Date</label>
         <input
-          value={ this.state.startDate }
+          value={ this.state.start }
           onChange={ this.handleInputChange }
-          name="startDate"
-          id="startDate"
+          name="start"
+          id="start"
           placeholder="Enter Start Date"
           required
         />
     
         <label htmlFor="endDate">End Date</label>
         <input
-          value={ this.state.endDate }
+          value={ this.state.end }
           onChange={ this.handleInputChange }
-          name="endDate"
-          id="endDate"
+          name="end"
+          id="end"
           placeholder="Enter End Date"
           required
         />
