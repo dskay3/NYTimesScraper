@@ -47,7 +47,7 @@ class Saved extends Component {
         <Container>
           {/* <h4>List of Saved Articles</h4> */}
 
-          <ul className="collection with-header">
+          <ul className="collection with-header saved-results">
             <li className="collection-header">
               <h4>List of Saved Articles</h4>
               <br />
@@ -59,13 +59,13 @@ class Saved extends Component {
             { this.state.articles.map(result => 
               <li key={ result._id } className="collection-item">
                 <div>
-                  <p className="">
+                  <p>
                     <strong>Article: </strong>
                     <a className="article-title" href={ result.url }> { result.title }</a>
                   </p>
 
                   <a className="secondary-content right" onClick={ () => this.deleteSavedArticle(result._id) }>
-                    <i className="fa fa-trash" aria-hidden="true"></i>
+                    <i className="fa fa-trash save-btn" aria-hidden="true"></i>
                   </a>
                 </div>
 

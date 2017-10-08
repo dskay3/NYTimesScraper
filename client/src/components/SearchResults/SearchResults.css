@@ -6,3 +6,8 @@ p {
   margin-top: 0px;
   margin-bottom: 0px;
 }
+
+.save-btn:hover {
+  color: red;
+  font-size: 20px;
+}
