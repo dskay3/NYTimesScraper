@@ -40,5 +40,10 @@ export default {
   // Get saved articles
   getSavedArticles: function() {
     return axios.get("/api/articles/");
+  },
+
+  // Delete saved articles
+  deleteArticles: function(id) {
+    return axios.delete("/api/articles/saved/" + id);
   }
 }

@@ -11,11 +11,10 @@ router.route("/")
 router.route("/saved")
   .post(articleController.create);
 
-// Matches with "/api/articles/:id"
-router
-  .route("/:id")
+// Router to delete to saved articles 
+// Route: /api/articles/saved/:id
+router.route("/saved/:id")
   .get(articleController.findById)
-  // .put(articleController.update)
   .delete(articleController.remove);
 
 module.exports = router;

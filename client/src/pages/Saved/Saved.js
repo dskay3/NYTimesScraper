@@ -11,7 +11,6 @@ class Saved extends Component {
   // Load during initial load
   componentDidMount() {
     this.loadSavedArticles();
-    console.log('hi')
   };
 
   // Function to load saved articles
@@ -27,6 +26,15 @@ class Saved extends Component {
       .catch(error => console.log(error));
   };
 
+  // Function to delete saved articles
+  deleteSavedArticle = id =>  {
+    API.deleteArticles(id)
+      .then(result => {
+        this.loadSavedArticles();
+      })
+      .catch(error => console.log(error));
+  }
+
   render() {
     return (
       <ul className="list-group">
@@ -34,6 +42,7 @@ class Saved extends Component {
         <li key={ result._id } className="list-group-item">
           <p className="left">{ result.title }</p>
           <a href={ result.url } className="right">Source</a>
+          <button onClick={ () => this.deleteSavedArticle(result._id) }>X</button>
         </li>
       )}
     </ul>
