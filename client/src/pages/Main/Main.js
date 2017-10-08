@@ -10,6 +10,7 @@ import API from "../../util/API";
 
 // Main component
 class Main extends Component {
+  // Initial states
   state = {
     articles: [],
     search: "",
@@ -17,6 +18,7 @@ class Main extends Component {
     end: "",
   }
 
+  // Function to handle input changes to inputs
   handleInputChange = event => {
     // Stores values from the form
     const { name, value } = event.target;
@@ -27,10 +29,12 @@ class Main extends Component {
     });
   }
 
+  // Function to handle when form is submitted
   handleFormSubmit = event => {
     // Prevents running duplicates
     event.preventDefault();
 
+    // Gets articles from NY Times API
     API.getArticles(
       this.state.search,
       this.state.start,
@@ -47,13 +51,6 @@ class Main extends Component {
         })
       });
   }
-
-  // Save articles 
-  // handleClick = (event) => {
-
-  //   console.log(this.state.articles.docs);
-  //   console.log(this.state.articles.docs.headline)
-  // }
 
   render() {
     return(
@@ -75,7 +72,6 @@ class Main extends Component {
             <Col size="sm-7">
               <SearchResults
                 results={ this.state.articles }
-                /* handleClick={ t } */
               />
             </Col>
           </Row>

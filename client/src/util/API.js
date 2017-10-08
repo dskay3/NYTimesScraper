@@ -35,5 +35,10 @@ export default {
           return results._id
         })
     );
+  },
+
+  // Get saved articles
+  getSavedArticles: function() {
+    return axios.get("/api/articles/");
   }
 }
