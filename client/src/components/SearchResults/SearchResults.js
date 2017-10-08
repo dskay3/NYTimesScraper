@@ -71,7 +71,7 @@ class SearchResults extends Component {
               </div>
 
               <br />
-              Date Published: { moment(result.pub_date.substring(0, 10)).add(1, 'year').format('LL') }
+              Date Published: { moment(result.pub_date.substring(0, 10)).format('LL') }
             </li>
           )}
         </ul>
