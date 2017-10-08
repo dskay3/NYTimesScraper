@@ -1,0 +1,5 @@
+.article-title:hover {
+  color: red !important;
+  font-weight: bold;
+  text-decoration: none;
+}

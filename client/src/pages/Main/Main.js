@@ -1,6 +1,6 @@
 // Dependencies
 import React, { Component } from "react";
-import HeaderContainer from "../../components/HeaderContainer";
+import MainHeaderContainer from "../../components/MainHeaderContainer";
 import Container from "../../components/Container";
 import Row from "../../components/Row";
 import Col from "../../components/Col";
@@ -55,12 +55,13 @@ class Main extends Component {
   render() {
     return(
       <div>
-        <HeaderContainer />
+        <MainHeaderContainer />
 
         <Container style={{ marginTop: 30 }}>
           <Row>
             <Col size="sm-5">
               <SearchForm 
+                header={ "Article Search" }
                 handleFormSubmit={ this.handleFormSubmit }
                 handleInputChange={ this.handleInputChange }
                 end={ this.state.end }

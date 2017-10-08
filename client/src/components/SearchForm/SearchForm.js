@@ -4,48 +4,52 @@ import "./SearchForm.css";
 
 // Search Form component
 const SearchForm = props =>
-  <form className="searchForm">
-    <input
-      value={ props.search }
-      onChange={ props.handleInputChange }
-      name="search"
-      placeholder="Enter in topic"
-      id="search"
-      required
-    />
-    <label htmlFor="search">Search Topic</label>
+  <div>
+    <h4>{ props.header }</h4>
 
-    <input
-      value={ props.start }
-      onChange={ props.handleInputChange }
-      name="start"
-      id="start"
-      placeholder="Enter Start Date"
-      required
-    />
-    <label htmlFor="start">Start Date</label>
+    <form className="searchForm">
+      <input
+        value={ props.search }
+        onChange={ props.handleInputChange }
+        name="search"
+        placeholder="Enter in topic"
+        id="search"
+        required
+      />
+      <label htmlFor="search">Search Topic</label>
 
-    <input
-      value={ props.end }
-      onChange={ props.handleInputChange }
-      name="end"
-      id="end"
-      placeholder="Enter End Date"
-      required
-    />
-    <label htmlFor="end">End Date</label>
+      <input
+        value={ props.start }
+        onChange={ props.handleInputChange }
+        name="start"
+        id="start"
+        placeholder="Enter Start Date"
+        required
+      />
+      <label htmlFor="start">Start Date</label>
 
-    <br />
-    <br />
+      <input
+        value={ props.end }
+        onChange={ props.handleInputChange }
+        name="end"
+        id="end"
+        placeholder="Enter End Date"
+        required
+      />
+      <label htmlFor="end">End Date</label>
 
-    <button
-      type="submit"
-      onClick={ props.handleFormSubmit }
-      className="btn waves-effect waves-light submit-btn"
-    >
-      Search
-      <i className="material-icons right">send</i>
-    </button>
-  </form>;
+      <br />
+      <br />
+
+      <button
+        type="submit"
+        onClick={ props.handleFormSubmit }
+        className="btn waves-effect waves-light submit-btn"
+      >
+        Search
+        <i className="material-icons right">send</i>
+      </button>
+    </form>
+  </div>;
 
 export default SearchForm;
