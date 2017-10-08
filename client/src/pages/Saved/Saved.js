@@ -45,8 +45,6 @@ class Saved extends Component {
         <SavedHeaderContainer />
 
         <Container>
-          {/* <h4>List of Saved Articles</h4> */}
-
           <ul className="collection with-header saved-results">
             <li className="collection-header">
               <h4>List of Saved Articles</h4>
