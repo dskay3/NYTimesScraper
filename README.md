@@ -24,7 +24,8 @@ This application scrapes articles from the NY Times homepage website.
 + React-Router
 
 ## Live Demo
-
+[![alt text](https://i.imgur.com/N8EzVJQ.png)](https://times-scraper-dskay7.herokuapp.com/)
+Click on image to view application.
 
 [license]: https://github.com/dskay3/NYTimesScraper/blob/master/LICENSE
 [license-badge]: https://img.shields.io/github/license/mashape/apistatus.svg
