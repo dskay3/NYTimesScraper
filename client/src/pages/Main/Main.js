@@ -37,8 +37,8 @@ class Main extends Component {
     // Gets articles from NY Times API
     API.getArticles(
       this.state.search,
-      this.state.start,
-      this.state.end
+      this.state.start.replace(/-/g,""),
+      this.state.end.replace(/-/g,"")
     )
       .then(results => {
         console.log(results);

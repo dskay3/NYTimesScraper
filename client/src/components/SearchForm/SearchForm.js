@@ -24,6 +24,7 @@ const SearchForm = props =>
         name="start"
         id="start"
         placeholder="Enter Start Date"
+        type="date"
         required
       />
       <label htmlFor="start">Start Date</label>
@@ -34,6 +35,7 @@ const SearchForm = props =>
         name="end"
         id="end"
         placeholder="Enter End Date"
+        type="date"
         required
       />
       <label htmlFor="end">End Date</label>
