@@ -21,11 +21,12 @@ export default {
   },
 
   // Post saved articles
-  saveArticles: function(title, date, url) {
+  saveArticles: function(title, date, url, save_date) {
     const newArticle = {
       title,
       date,
-      url
+      url,
+      save_date
     };
 
     return (

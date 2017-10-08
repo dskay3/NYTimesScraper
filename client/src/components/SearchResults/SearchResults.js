@@ -9,15 +9,22 @@ class SearchResults extends Component {
   state = {
     title: "",
     url: "",
-    pub_date: ""
+    pub_date: "",
   }
 
+  // Function to handle click
   handleClick = (article, event) => {
     console.log(article);
+    console.log(`Raw Time: ${new Date()}`);
 
-    API.saveArticles(article.headline.main, article.pub_date, article.web_url)
+    // Constant to store time page is saved
+    const clickTime = JSON.stringify(new Date()).substring(1, 11);
+
+    // Saves articles
+    API.saveArticles(article.headline.main, article.pub_date, article.web_url, clickTime)
       .catch(error => console.log(error));
   }
+
 
   render() {
     if (typeof this.props.results.docs === "undefined") {

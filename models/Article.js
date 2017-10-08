@@ -23,6 +23,10 @@ const ArticleSchema = new Schema({
     type: Date
   },
 
+  save_date: {
+    type: Date
+  }
+
 });
 
 // Create Article model with ArticleSchema
