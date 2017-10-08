@@ -18,5 +18,22 @@ export default {
       .then(function(results) {
         return results.data.response;
       })
+  },
+
+  // Post saved articles
+  saveArticles: function(title, date, url) {
+    const newArticle = {
+      title,
+      date,
+      url
+    };
+
+    return (
+      axios.post("/api/articles/saved", newArticle)
+        .then(results => {
+          console.log(results);
+          return results._id
+        })
+    );
   }
 }

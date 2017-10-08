@@ -14,7 +14,7 @@ class Main extends Component {
     articles: [],
     search: "",
     start: "",
-    end: ""
+    end: "",
   }
 
   handleInputChange = event => {
@@ -48,6 +48,13 @@ class Main extends Component {
       });
   }
 
+  // Save articles 
+  // handleClick = (event) => {
+
+  //   console.log(this.state.articles.docs);
+  //   console.log(this.state.articles.docs.headline)
+  // }
+
   render() {
     return(
       <div>
@@ -68,6 +75,7 @@ class Main extends Component {
             <Col size="sm-7">
               <SearchResults
                 results={ this.state.articles }
+                /* handleClick={ t } */
               />
             </Col>
           </Row>
