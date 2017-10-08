@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Wrapper from "./components/Wrapper";
 import Footer from "./components/Footer";
 import Main from "./pages/Main";
+import Saved from "./pages/Saved";
 
 // App component
 const App = () => 
@@ -13,8 +14,8 @@ const App = () =>
       <Navbar />
       <Wrapper>
         <Route exact path="/" component={ Main } />
-        {/* <Route exact path="/articles" component={} />
-        <Route exact path="/article/:id" component={} /> */}
+        <Route exact path="/saved" component={ Saved } />
+        {/* <Route exact path="/article/:id" component={} /> */}
       </Wrapper>
       <Footer />
     </div>
