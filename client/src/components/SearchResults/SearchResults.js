@@ -23,7 +23,7 @@ class SearchResults extends Component {
     if (typeof this.props.results.docs === "undefined") {
       return(
         <li className="list-group-item">
-          <h3>
+          <h3 className="text-center">
             Please search in order for articles to be displayed.
           </h3>
         </li>
@@ -47,10 +47,18 @@ class SearchResults extends Component {
               <div>
                 <p>
                   <strong>Article: </strong>
-                  <a href={ result.web_url } className="article-title">{ result.headline.main }</a>
+                  <a 
+                    href={ result.web_url } 
+                    className="article-title"
+                  >
+                    { result.headline.main }
+                  </a>
                 </p>
 
-                <a className="secondary-content right" onClick={ this.handleClick.bind(this, result) }>
+                <a 
+                  className="secondary-content right" 
+                  onClick={ this.handleClick.bind(this, result) }
+                >
                   <i className="fa fa-bookmark save-btn" aria-hidden="true"></i>
                 </a>
               </div>
