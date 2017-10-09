@@ -1,7 +1,6 @@
 @font-face {
   font-family: "Old-English";
-  src: url("../Fonts/EnglishTowne.ttf") format("truetype");
-}
+  src: url("../../assets/fonts/EnglishTowne.ttf") format("truetype");}
 
 .brand-logo {
   margin-left: 20px;

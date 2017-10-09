@@ -71,7 +71,7 @@ class Saved extends Component {
                 Date Published: { moment(result.date.substring(0, 10)).format('LL') }
                 
                 <br />
-                Date Saved: { moment(result.save_date).format('LL') }
+                Date Saved: { moment(result.save_date).add('1', "days").format('LL') }
               </li>
             )}
           </ul>
