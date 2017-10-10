@@ -7,6 +7,7 @@
 ## The Application
 This application scrapes articles from the NY Times homepage website.
 
+
 ## Technologies
 + ReactJS
 + Express
@@ -22,13 +23,18 @@ This application scrapes articles from the NY Times homepage website.
 + Mongoose
 + Axios
 + React-Router
++ REST API
+  + NY Times API for displaying NY Times articles
+
 
 ## Live Demo
 [![alt text](https://i.imgur.com/N8EzVJQ.png)](https://times-scraper-dskay7.herokuapp.com/)
 > Click on image to view application or ![Click Here](https://times-scraper-dskay7.herokuapp.com/)
 
+
 ## Wireframes
 ![Main component](https://github.com/dskay3/ny-times-scraper/blob/master/wireframes/main.png)
+
 
 ![Saved component](https://github.com/dskay3/ny-times-scraper/blob/master/wireframes/saved.png)
 
