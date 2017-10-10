@@ -27,6 +27,10 @@ This application scrapes articles from the NY Times homepage website.
 [![alt text](https://i.imgur.com/N8EzVJQ.png)](https://times-scraper-dskay7.herokuapp.com/)
 Click on image to view application.
 
+## Wireframes
+![Main component](https://github.com/dskay3/ny-times-scraper/blob/master/wireframes/main.png)
+![Saved component](https://github.com/dskay3/ny-times-scraper/blob/master/wireframes/saved.png)
+
 [license]: https://github.com/dskay3/NYTimesScraper/blob/master/LICENSE
 [license-badge]: https://img.shields.io/github/license/mashape/apistatus.svg
 [github-watch]: https://github.com/dskay3/NYTimesScraper/watchers
