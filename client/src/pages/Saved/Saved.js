@@ -41,6 +41,10 @@ class Saved extends Component {
       .catch(error => console.log(error));
   }
 
+  onChange = event => {
+    this.loadSavedArticles();
+  }
+
   render() {
     return (
       <div>
@@ -59,7 +63,11 @@ class Saved extends Component {
                 </li>
 
                 { this.state.articles.map(result => 
-                  <li key={ result._id } className="collection-item">
+                  <li 
+                    key={ result._id } 
+                    className="collection-item"
+                    onChange={ this.handleChange }
+                  >
                     <div>
                       <p>
                         <strong>Article: </strong>
