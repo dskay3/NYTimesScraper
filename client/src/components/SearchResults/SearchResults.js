@@ -1,8 +1,6 @@
 // Dependencies
 import React, { Component } from "react";
-import "./SearchResults.css";
 import API from "../../util/API";
-// import moment from "moment";
 import SearchItem from "../SearchItem";
 
 // Search Results component
