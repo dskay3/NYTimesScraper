@@ -41,6 +41,7 @@ class Saved extends Component {
       .catch(error => console.log(error));
   }
 
+  // Function that loads current saved articles whenever component handles a change
   onChange = event => {
     this.loadSavedArticles();
   }

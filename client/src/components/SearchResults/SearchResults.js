@@ -8,13 +8,27 @@ class SearchResults extends Component {
   state = {
     title: "",
     url: "",
-    pub_date: "",
+    pub_date: ""
+    // ,articles: []
   }
 
   // Function to handle click
   handleClick = (article, event) => {
     console.log(article);
     console.log(`Raw Time: ${new Date()}`);
+
+    // ISSUE:
+    // Could try something like this where the current articles array is stored when props is passed from the SearchForm component and then spliced based off of the current article that is passed in as an argument in this function
+    
+    // let currentArticlesArr = this.props.results.docs; // Stores the current articles array
+
+    // Removes the saved article from the array
+    // currentArticlesArr.splice(currentArticlesArr.indexOf(article), 1);
+
+    // ISSUE: This updated articles state needs to passed in the SearchItem results attribute..
+    // this.setState({
+    //   articles: currentArticlesArr
+    // });
 
     // Constant to store time page is saved
     const clickTime = JSON.stringify(new Date()).substring(1, 11);
