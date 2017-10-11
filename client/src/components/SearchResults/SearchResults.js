@@ -2,7 +2,8 @@
 import React, { Component } from "react";
 import "./SearchResults.css";
 import API from "../../util/API";
-import moment from "moment";
+// import moment from "moment";
+import SearchItem from "../SearchItem";
 
 // Search Results component
 class SearchResults extends Component {
@@ -48,35 +49,15 @@ class SearchResults extends Component {
             <p>Click <i className="fa fa-bookmark" aria-hidden="true"></i> to add to Saved list.</p>
           </li>
 
+          <SearchItem
+            results={ this.props.results.docs }
+            handleClick={ this.handleClick }
+          >
+          </SearchItem>
 
-          { this.props.results.docs.map(result => 
-            <li key={ result._id } className="collection-item">
-              <div>
-                <p>
-                  <strong>Article: </strong>
-                  <a 
-                    href={ result.web_url } 
-                    className="article-title"
-                  >
-                    { result.headline.main }
-                  </a>
-                </p>
-
-                <a 
-                  className="secondary-content right" 
-                  onClick={ this.handleClick.bind(this, result) }
-                >
-                  <i className="fa fa-bookmark save-btn" aria-hidden="true"></i>
-                </a>
-              </div>
-
-              <br />
-              Date Published: { moment(result.pub_date.substring(0, 10)).format('LL') }
-            </li>
-          )}
         </ul>
-      );
-    };
+      )
+    }
   }
 }
 
