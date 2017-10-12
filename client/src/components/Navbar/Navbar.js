@@ -8,8 +8,8 @@ const Navbar = props =>
   <nav className="nav-extended main-nav">
     <div className="nav-wrapper">
       {/* Webpage Logo */}
-      <Link className="brand-logo" to="/">
-        The NY Times Article Scraper
+      <Link to="/">
+        <p className="brand-logo" >The NY Times Article Searcher</p>
       </Link>
 
       {/* Mobile: Creates burger icon */}
