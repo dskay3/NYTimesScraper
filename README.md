@@ -1,11 +1,11 @@
-# NYTimesScraper
+# NYTimesSearcher
 
 [![MIT License][license-badge]][LICENSE]
 [![Watch on GitHub][github-watch-badge]][github-watch]
 [![Star on GitHub][github-star-badge]][github-star]
 
 ## The Application
-This application scrapes articles from the NY Times homepage website.
+This application searches for articles from the NY Times homepage website.
 
 
 ## Technologies
@@ -28,19 +28,19 @@ This application scrapes articles from the NY Times homepage website.
 
 
 ## Live Demo
-[![alt text](https://i.imgur.com/N8EzVJQ.png)](https://times-scraper-dskay7.herokuapp.com/)
-> Click on image to view application or ![Click Here](https://times-scraper-dskay7.herokuapp.com/)
+[![alt text](https://i.imgur.com/N8EzVJQ.png)](https://times-searcher-dskay7.herokuapp.com/)
+> Click on image to view application or ![Click Here](https://times-searcher-dskay7.herokuapp.com/)
 
 
 ## Wireframes
-![Main component](https://github.com/dskay3/ny-times-scraper/blob/master/wireframes/main.png)
+![Main component](https://github.com/dskay3/ny-times-searcher/blob/master/wireframes/main.png)
 
 
-![Saved component](https://github.com/dskay3/ny-times-scraper/blob/master/wireframes/saved.png)
+![Saved component](https://github.com/dskay3/ny-times-searcher/blob/master/wireframes/saved.png)
 
-[license]: https://github.com/dskay3/NYTimesScraper/blob/master/LICENSE
+[license]: https://github.com/dskay3/ny-times-searcher/blob/master/LICENSE
 [license-badge]: https://img.shields.io/github/license/mashape/apistatus.svg
-[github-watch]: https://github.com/dskay3/NYTimesScraper/watchers
-[github-watch-badge]: https://img.shields.io/github/watchers/dskay3/NYTimesScraper.svg?style=social&label=Watch&style=flat-square
-[github-star]: https://github.com/dskay3/NYTimesScraper/stargazers
-[github-star-badge]: https://img.shields.io/github/stars/dskay3/NYTimesScraper.svg?style=social&label=Stars&style=flat-square
+[github-watch]: https://github.com/dskay3/ny-times-searcher/watchers
+[github-watch-badge]: https://img.shields.io/github/watchers/dskay3/ny-times-searcher.svg?style=social&label=Watch&style=flat-square
+[github-star]: https://github.com/dskay3/ny-times-searcher/stargazers
+[github-star-badge]: https://img.shields.io/github/stars/dskay3/ny-times-searcher.svg?style=social&label=Stars&style=flat-square
