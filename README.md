@@ -28,7 +28,7 @@ This application searches for articles from the NY Times homepage website.
 
 
 ## Live Demo
-[![alt text](https://i.imgur.com/N8EzVJQ.png)](https://times-searcher-dskay7.herokuapp.com/)
+[![alt text](https://github.com/dskay3/ny-times-searcher/blob/master/images/applicationUI.png)](https://times-searcher-dskay7.herokuapp.com/)
 > Click on image to view application or ![Click Here](https://times-searcher-dskay7.herokuapp.com/)
 
 
