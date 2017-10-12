@@ -20,8 +20,8 @@ const SearchItem = props =>
           </p>
 
           <a 
-            className="secondary-content right" 
-            onClick={ props.handleClick.bind(this, result) }
+            className="secondary-content right"
+            onClick={ () => props.handleSaveArticle(result) }
           >
             <i className="fa fa-bookmark save-btn" aria-hidden="true"></i>
           </a>

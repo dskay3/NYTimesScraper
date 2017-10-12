@@ -42,14 +42,33 @@ class Main extends Component {
     )
       .then(results => {
         console.log(results);
-
         this.setState({
           articles: results,
           search: "",
           start: "",
           end: ""
-        })
+        });
       });
+  }
+
+  // Function to handle save article, take off of the list
+  handleSaveArticle = (article) => {
+    // Removes the saved article from the array (filters out)
+    let newArr = this.state.articles.docs.filter(art =>  art._id !== article._id );
+
+    // This updated articles state needs to be passed in the SearchItem results attribute..
+    this.setState({
+      articles: {
+        docs: newArr
+      }
+    });
+
+    // Constant to store time page is saved
+    const clickTime = JSON.stringify(new Date()).substring(1, 11);
+
+    // Saves articles
+    API.saveArticles(article.headline.main, article.pub_date, article.web_url, clickTime)
+      .catch(error => console.log(error));
   }
 
   render() {
@@ -71,8 +90,9 @@ class Main extends Component {
             </Col>
 
             <Col size="sm-7">
-              <SearchResults
-                results={ this.state.articles }
+              <SearchResults 
+                results={ this.state.articles } 
+                handleSaveArticle={ this.handleSaveArticle.bind(this) }
               />
             </Col>
           </Row>
