@@ -18,11 +18,12 @@ const ArticleSchema = new Schema({
     required: true
   },
 
-  // Scrape time
+  // Article published date
   date: {
     type: Date
   },
 
+  // Saved date
   save_date: {
     type: Date
   }
